@@ -1,0 +1,65 @@
+when I tried to run python from its file from the terminal, I got the below error:
+ModuleNotFoundError: No module named 'Flask'
+
+to show where Flash has been installed, do:
+=> pip show flask
+
+Check the link below for instructions:
+https://flask.palletsprojects.com/en/1.1.x/installation/#virtual-environments
+
+To install the virtual environment on Linux, do:
+=> sudo apt-get install python-virtualenv
+
+To activiate the environment, do:
+=> . venv/bin/activate
+
+Now try to re-install the Flask packages again:
+
+To doube check if pip is installed:
+=> pip -V
+
+To check pip packages list:
+=> pip list
+
+To uninstall a specific pip package:
+=> pip uninstall package-name
+
+You can run your Python file from the terminal (being on the right directory folder) in 2 ways:
+=> python3 + file pathway
+or
+=> export FLASK_APP=file-name
+=> export FLASK_ENV=development
+=> flask run
+
+e.g.
+=> export FLASK_APP=run.py
+=> export FLASK_ENV=development
+=> flask run
+
+To install pip3
+=> pip3 install flask
+
+To install flask-login
+=> pip3 install flask-login
+
+
+To set up python virtual env.
+python3.8 -m venv venv
+source venv/bin/activate
+pip3 install pip --upgrade
+pip3 install flask
+pip3 install flask-SQLAlchemy (if produces error => /bin/python3: can't find '__main__' module in), then try the method below:
+pip3 install flask-SQLAlchemy==3.0.3
+pip3 install flask_wtf flask_bootstrap email_validator install
+# flask_sqlalchemy
+
+To install SQLite on ubuntu follow:
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-sqlite-on-ubuntu-20-04
+# sqlite3 ecommerce.db
+
+To run the flask app:
+- cd path/to/project
+- source venv/bin/activate
+- python3 app.py
+- In a browser open http://127.0.0.1:5000/
+
