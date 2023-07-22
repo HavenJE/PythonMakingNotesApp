@@ -30,6 +30,41 @@
         </div>
     </nav>
 
+    <!-- Flash messages appear here -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+
+    <!-- we are going to loop through messages if there are any -->
+    {% if messages %}
+
+    {% for category, message in messages %}
+    <!-- if the category of message is error -->
+    {% if category == 'error' %}
+
+    <!-- Here, we just write an html for alert message -->
+    <div class="alert alert-danger alert-dismissable fade show" role="alert">
+        {{ message }}
+        <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">
+                &times;
+            </span>
+        </button>
+    </div>
+    {% else %}
+    <!-- Here, we just write an html for success message -->
+    <div class="alert alert-success alert-dismissable fade show" role="alert">
+        {{ message }}
+        <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">
+                &times;
+            </span>
+        </button>
+    </div>
+
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+
     <div class="container">
         {% block content %}
 

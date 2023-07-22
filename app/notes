@@ -66,3 +66,12 @@ To run the flask app:
 - In a browser open http://127.0.0.1:5000/
 
 The two curly brackets {{ python expression }} means there is a python expression that will be evaluated.
+
+HTTP requests
+
+- a GET request = is when we load a website or retrieve the HTML on a page (retrieve info)
+- a POST request = when we make some kind of change to a database or the state of the website (creating or updating something)
+
+To solve the error - TypeError: create_all() got an unexpected keyword argument 'app'
+=> check this link
+https://www.youtube.com/watch?v=Ym-LtvGhbwQ&ab_channel=PeterSchneider
